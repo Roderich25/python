@@ -1,0 +1,24 @@
+<html>
+<head>
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+        <input autocomplete="off" autofocus name="q" placeholder="Query" type="text">
+        <ul></ul>
+        <script src="large.js"></script>
+        <script>
+            let input = document.querySelector('input');
+            input.onkeyup = function(){
+                let html = '';
+                if(input.value){
+                    for(word of WORDS2){
+                        if(word.startsWith(input.value)){
+                            html += '<li>' + word + '</li>';
+                        }
+                    }
+                }
+                document.querySelector('ul').innerHTML = html;
+            };
+        </script>
+</body>
+</html>
