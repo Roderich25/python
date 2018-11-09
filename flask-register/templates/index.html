@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body%}
+<h1>Hello {{ name }}!</h1>
+Register:<br>
+<form action="/register" method="post">
+    <input class="input1" type="text" name="name" placeholder="Name">
+    <input class="input2 "type="text" name="email" placeholder="e-mail">
+    <select class="input3" name="country">
+        <option disabled selected value="">Country</option>
+        <option value="México">México</option>
+        <option value="United States">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="Abroad">Other</option>
+    </select>
+    <input type="submit" value="Register">
+</form>
+<script>
+    document.querySelector('form').onsubmit = function(){
+        if(!document.querySelector('.input1').value){
+            alert('You must provide a name');
+            return false;
+        } else if(!document.querySelector('.input2').value){
+            alert('You must provide an e-mail');
+            return false;
+        } else if(!document.querySelector('.input3').value){
+            alert('You must provide a country');
+            return false;
+        }
+        return true;
+    };
+</script>
+{% endblock %}

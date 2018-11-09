@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Succesfully registered.</h1> (Please review your e-mail.)
+<br>
+<br>
+People already registered.
+<ul>
+    {% for person in persons %}
+    <li>{{ person }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
