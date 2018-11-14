@@ -1,13 +1,13 @@
-<html>
-<head>
+{% extends "layout.html" %}
+{% block body %}
+    <form>
+        <input class="index3" autocomplete="off" autofocus name="q" placeholder="Query" type="text">
+        <ul class="searchOutput"></ul>
+    </form>
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-</head>
-<body>
-        <input autocomplete="off" autofocus name="q" placeholder="Query" type="text">
-        <ul></ul>
-        <script src="large.js"></script>
+        <script src="/static/large.js"></script>
         <script>
-            let input = document.querySelector('input');
+            let input = document.querySelector('.index3');
             input.onkeyup = function(){
                 let html = '';
                 if(input.value){
@@ -17,8 +17,8 @@
                         }
                     }
                 }
-                document.querySelector('ul').innerHTML = html;
+                document.querySelector('.searchOutput').innerHTML = html;
             };
         </script>
-</body>
-</html>
+
+{% endblock %}

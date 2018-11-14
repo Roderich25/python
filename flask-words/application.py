@@ -15,6 +15,11 @@ def index():
 def index2():
     return render_template("index2.html")
 
+@app.route("/javascript")
+def index3():
+    return render_template("index3.html")
+
+
 @app.route("/search")
 def search():
     words = [word for word in WORDS if word.startswith(request.args.get("q").lower())]
