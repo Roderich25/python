@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+    <ul>
+        {% for row in rows %}
+            <li>{{ row["Title"] }} recorded by {{ row["Name"] }}.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
