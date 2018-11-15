@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Store</h1>
+    <form action="/update" method="post">
+        <p><input min="0" type="number" name="foo" value="0"> Foo</p>
+        <p><input min="0" type="number" name="bar" value="0"> Bar</p>
+        <p><input min="0" type="number" name="baz" value="0"> Baz</p>
+        <input type="submit" value="Purchase">
+    </form>
+View your <a href="/cart">shopping cart</a>
+{% endblock %}
