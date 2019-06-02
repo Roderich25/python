@@ -1,0 +1,15 @@
+<html>
+<head>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <title>Bitso</title>
+</head>
+<body>
+<h1>Bitso Converter</h1>
+<form id="converter" method="post">
+    <input type="text" id="currency" name="currency">
+    <input type="submit" value="Get current value">
+</form>
+<h2 id="result">
+</h2>
+</body>
+</html>
