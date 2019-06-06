@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+
+		if(!localStorage.getItem('counter'))
+			localStorage.setItem('counter',0);
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelector('h1').innerHTML = localStorage.getItem('counter');
+			setInterval(count, 1000);
+		});
+		
+
+		
+		function count(){
+			let counter = localStorage.getItem('counter');
+			counter++;
+			document.querySelector('h1').innerHTML = counter;
+			localStorage.setItem('counter',counter);
+		};
+		
+</script>
+<title></title>
+</head>
+	<body>
+		<div align="center">
+			<h1 style=font-size:300px>Task</h1>
+		</div>
+	</body>
+</html>
+
+

@@ -1,0 +1,52 @@
+<html>
+<head>
+<script content="text/javascript">
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    load_page('Español');
+
+    document.querySelectorAll('.nav-link').forEach( link => {
+        link.onclick = () => {
+            load_page(link.dataset.page);
+            return false;
+        };
+    });
+
+
+});
+
+    window.onpopstate = e => {
+        const data = e.state;
+        document.title = data.title;
+        document.querySelector('#body').innerHTML = data.text;
+    };
+
+    function load_page(name){
+        const request = new XMLHttpRequest();
+        request.open('GET', `/${name}`);
+        request.onload = () =>{
+            const response = request.responseText;
+            document.querySelector('#body').innerHTML = response;
+
+            document.title = name;
+            history.pushState({'title':name, 'text':response}, name, name)
+        };
+        request.send();
+
+    }
+
+</script>
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="" class="nav-link" data-page="Español">Español</a></li>
+        <li><a href="" class="nav-link" data-page="English">English</a></li>
+        <li><a href="" class="nav-link" data-page="Français">Français</a></li>
+    </ul>
+    <hr>
+    <div id="body" align="center">
+
+    </div>
+</body>
+</html>
