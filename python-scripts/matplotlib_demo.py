@@ -1,3 +1,4 @@
+import numpy
 from matplotlib import pyplot
 
 # print(pyplot.style.available)
@@ -38,4 +39,16 @@ pyplot.legend()
 pyplot.grid(True)
 pyplot.tight_layout()
 pyplot.savefig('plot.png')
+pyplot.show()
+
+# Bar-chart
+x_indexes = numpy.arange(len(ages_x))
+width = 0.25
+
+pyplot.bar(x_indexes - width, dev_y, width=width, color='#444444', label='All Devs')
+pyplot.bar(x_indexes, py_dev_y, width=width, label='Python')
+pyplot.bar(x_indexes + width, js_dev_y, width=width, label='JavaScript')
+
+pyplot.xticks(ticks=x_indexes, labels=ages_x)
+pyplot.legend()
 pyplot.show()
