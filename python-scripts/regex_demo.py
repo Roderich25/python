@@ -32,7 +32,7 @@ for match in matches:
 
 
 pattern2 = re.compile(r'\d{3}.\d{3}.\d{4}')
-with open('data.txt', 'r') as f:
+with open('data_regex.txt', 'r') as f:
     contents = f.read()
     matches = pattern2.finditer(contents)
     for match in matches:
