@@ -11,7 +11,7 @@ language_counter = Counter()
 # for row in csv_reader:
 # language_counter.update(row['LanguagesWorkedWith'].split(';'))
 
-data = pandas.read_csv('data.csv')
+data = pandas.read_csv('data_barchart.csv')
 ids = data['Responder_id']
 lang_responses = data['LanguagesWorkedWith']
 for response in lang_responses:
