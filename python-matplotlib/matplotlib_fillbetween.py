@@ -23,4 +23,5 @@ plt.title('Median Salary by Age')
 
 plt.legend()
 plt.tight_layout()
+plt.savefig('fillbetween.png')
 plt.show()

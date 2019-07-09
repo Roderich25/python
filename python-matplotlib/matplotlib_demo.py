@@ -38,7 +38,7 @@ pyplot.title('Median Salary by Age')
 pyplot.legend()
 pyplot.grid(True)
 pyplot.tight_layout()
-pyplot.savefig('plot.png')
+pyplot.savefig('demo.png')
 pyplot.show()
 
 # Bar-chart

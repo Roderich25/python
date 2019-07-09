@@ -1,6 +1,5 @@
 from matplotlib import pyplot as plt
 
-# plt.style.use('fivethirtyeight')
 plt.xkcd()
 
 # Language Popularity
@@ -14,4 +13,5 @@ plt.pie(slices, labels=labels, explode=explode, shadow=True, startangle=90,
 
 plt.title('Programming Languages Pie Chart')
 plt.tight_layout()
+plt.savefig('piechart.png')
 plt.show()

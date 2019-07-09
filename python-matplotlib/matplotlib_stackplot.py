@@ -1,6 +1,6 @@
 from matplotlib import pyplot as plt
 
-plt.style.use("fivethirtyeight")
+plt.style.use("ggplot")
 
 days = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -17,4 +17,5 @@ plt.legend(loc=(0.05, 0.05))
 
 plt.title("Hours worked Stack Plot")
 plt.tight_layout()
+plt.savefig('stackplot.png')
 plt.show()
